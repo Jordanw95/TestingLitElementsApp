@@ -47,14 +47,17 @@
          return html`
          <div class = ${this.initial_page ? 'initial-menu' : 'hidden-initial-menu'}>
           <div class = 'menu-box'>
-          <h2 class="title">Click Below to get some jokes...<h1>
-           <button class="my-button" @click="${this.getData}">Get Jokes</button>
-           <label class= "my-label"><input id='safe-box' type="checkbox" checked @change="${this.safeJokes}">PG Jokes?</label>
+          <h2 class="title">Jokes loader</h2>
+          <p>Click below to load some jokes</p>
+          <button class="search-button" @click="${this.getData}">Get Jokes</button>
+          <label class= "my-label"><input id='safe-box' type="checkbox" checked @change="${this.safeJokes}">PG Jokes?</label>
           </div>
          </div>
         <div class = ${this.initial_page ? 'hidden-jokes-list' : 'jokes-list'}>
            ${this.dataTemplate}
-           <button class = "my-button" @click="${this.getData}">Load More</button>
+           <div class="button-wrap">
+              <button class = "more-button" @click="${this.getData}">Load More</button>
+           </div>
         </div>
          `;
        }
@@ -68,13 +71,6 @@
          </div>
          `)}
          `;
-       }
- 
-       _printState(){
-         console.log(this.jokes_list)
-         console.log(this.safe)
-         console.log(this.url)
-         console.log(this.initial_page)
        }
        
        _sendData(data){

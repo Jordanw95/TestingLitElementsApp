@@ -19,16 +19,21 @@ export const generalCSS = css`
     }
     .title{
         display:flex;
+        justify-content:center;
+        width:16em;
+        font-size:2.0em;
     }
     .hidden-jokes-list{
         display: none;
     }
     .jokes-list{
-        justify-content: center;
-        text-align:center;
-        padding:15px;
     }
     .jokes{
+        width: 32em;
+        justify-items:center;
+        text-align:center;
+        margin-left: auto;
+        margin-right: auto;
         padding: 15px;
         border-top: gray solid 4px;
         font-size:1.3em;
@@ -44,14 +49,25 @@ export const generalCSS = css`
         justify-content: center;
         text-align:center;
     }
-    .my-button{
+    .search-button{
         background-color: gray;
         color:white;
         border: solid black 3px;
-        font-size:0.9em;
+        font-size:1.5em;
         border-radius:1.0em;
+        padding:10px;
+    } 
+    .button-wrap{
+        text-align:center;
+    }
+    .more-button{
+        background-color: gray;
+        color:white;
+        border: solid black 3px;
+        border-radius:1.0em;
+        padding:10px;
     }
     .my-label{
-        font-size:0.8em;
+        font-size:1.2em;
     }
   }`;
